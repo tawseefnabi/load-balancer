@@ -2,6 +2,7 @@ package lb
 
 import (
 	"fmt"
+	"net/url"
 
 	"github.com/tawseefnabi/load-balancer/internal/server"
 )
@@ -15,4 +16,7 @@ func New() *LoadBalancer {
 	return &LoadBalancer{
 		controller: server.NewController(),
 	}
+}
+func (lb *LoadBalancer) Register(urls ...*url.URL) {
+
 }
